@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OURY AI VIDEO</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #aaa;
+      margin-bottom: 35px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 12px;
+      border: 1px solid #444;
+      background: #222;
+      color: white;
+      font-size: 16px;
+      resize: none;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      background: #00c853;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    #message {
+      margin-top: 25px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🎬 OURY AI VIDEO</h1>
+
+    <p class="subtitle">
+      Crée tes vidéos avec l'intelligence artificielle
+    </p>
+
+    <textarea
+      id="prompt"
+      placeholder="Décris la vidéo que tu veux créer...">
+    </textarea>
+
+    <button onclick="genererVideo()">
+      ✨ GÉNÉRER LA VIDÉO
+    </button>
+
+    <p id="message"></p>
+
+  </div>
+
+  <script>
+    function genererVideo() {
+      const prompt = document.getElementById("prompt").value;
+      const message = document.getElementById("message");
+
+      if (prompt.trim() === "") {
+        message.textContent = "Écris d'abord une description de ta vidéo.";
+        return;
+      }
+
+      message.textContent =
+        "⏳ Ta demande est prête. Le moteur vidéo IA sera connecté prochainement...";
+    }
+  </script>
+
+</body>
+  </html>
